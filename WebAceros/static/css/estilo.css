@@ -1,0 +1,20 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+header.bar_shadow {
+    --bs-bg-opacity: 1;
+    background-color: #0a0a0a!important;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.bar_text_white{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:aliceblue;
+}
