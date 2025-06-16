@@ -9,7 +9,7 @@ class Categoria(models.Model):
     nombre=models.CharField(max_length=100)
     code=models.CharField(max_length=15)
     fecha_crea=models.DateTimeField(auto_now_add=True)
-    status=models.BooleanField()
+    status=models.BooleanField(default=True)
     def __str__(self):
         return self.nombre
 class Product(models.Model):
@@ -18,17 +18,17 @@ class Product(models.Model):
     caracter=models.TextField()
     descripcion=models.TextField()
     presentacion=models.TextField()
-    imagen = models.DecimalField(max_digits=10,decimal_places=True)
+    imagen = models.ImageField(upload_to='productos/')
     fecha_crea=models.DateTimeField(auto_now_add=True)
-    status=models.BooleanField()
+    status=models.BooleanField(default = True)
     def __str__(self):
         return self.nombre
 class Sucursales(models.Model):
     nombre= models.CharField(max_length=100)
     direccion= models.TextField()
-    telefono= models.IntegerField(max_length=9)
+    telefono= models.CharField(max_length=15)
     coordenada= models.TextField()
     fecha_crea=models.DateTimeField(auto_now_add=True)
-    status=models.BooleanField()
+    status=models.BooleanField(default= True)
     def __str__(self):
         return self.nombre

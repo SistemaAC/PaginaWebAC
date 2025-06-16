@@ -7,7 +7,7 @@ def home(request):
 def contactos(request):
     return render(request,'contactos.html')
 
-def product_list(request):
+def productos (request):
     products=Product.objects.all()
     return render(request,'productos.html',{'products':products,})
 
